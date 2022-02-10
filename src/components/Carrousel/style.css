@@ -1,0 +1,10 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  max-height: 380px;
+  width: 100%;
+}
