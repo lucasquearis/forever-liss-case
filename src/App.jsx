@@ -1,5 +1,6 @@
 import React from 'react';
 import Carrousel from './components/Carrousel';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Highlights from './components/Highlights';
 import Navigation from './components/Navigation';
@@ -17,6 +18,7 @@ function App() {
       <Highlights />
       <Newsletter />
       <SocialMedias />
+      <Footer />
     </div>
   );
 }

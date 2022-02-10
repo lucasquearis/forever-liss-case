@@ -1,0 +1,31 @@
+.footer-container {
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  background-color: white;
+}
+
+.footer-box {
+  text-align: center;
+  font-size: 12px;
+  width: 70%;
+}
+
+.first-section-footer {
+  margin: 10px 0;
+  color: #AAAAAA;
+}
+
+.second-section-footer {
+  color: #AAAAAA;
+}
+
+.first-section-footer > p {
+  margin: 0;
+}
+
+.second-section-footer > p {
+  margin: 0;
+}
