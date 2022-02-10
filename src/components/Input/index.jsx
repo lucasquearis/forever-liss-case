@@ -3,7 +3,7 @@ import './style.css';
 
 function Input() {
   return (
-    <label htmlFor="search-bar">
+    <label className="input-box" htmlFor="search-bar">
       <input id="search-bar" type="text" placeholder="Qual o mimo de hoje para o seu anjinho?" />
       <button type="button">BUSCAR</button>
     </label>

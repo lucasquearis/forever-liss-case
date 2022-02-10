@@ -1,0 +1,21 @@
+.logo {
+  width: 160px;
+}
+
+.header-container {
+  display: flex;
+  background-color: #f7b094;
+  height: 150px;
+}
+
+.header-box {
+  justify-content: space-between;
+  display: flex;
+  margin: 0 30px;
+  width: 100%;
+  align-items: center;
+}
+
+.logo-box {
+  width: 20%;
+}

@@ -6,10 +6,14 @@ import './style.css';
 
 function Header() {
   return (
-    <header>
-      <img src={logo} alt="logo forever baby" />
-      <Input />
-      <HeaderIcons />
+    <header className="header-container">
+      <div className="header-box">
+        <div className="logo-box">
+          <img className="logo" src={logo} alt="logo forever baby" />
+        </div>
+        <Input />
+        <HeaderIcons />
+      </div>
     </header>
   );
 }

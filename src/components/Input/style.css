@@ -1,0 +1,28 @@
+.input-box {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-box > input {
+  width: 70%;
+  height: 52px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.input-box > input::placeholder {
+  padding: 0 20px;
+  font-style: italic;
+  color: #AAAAAA
+}
+
+.input-box > button {
+  border-radius: 0 3px 3px 0;
+  width: max-content;
+  padding: 0 20px;
+  height: 52px;
+  border-style: none;
+  background-color: white;
+  color: #345C7D;
+}

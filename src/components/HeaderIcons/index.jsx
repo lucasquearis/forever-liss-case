@@ -5,9 +5,19 @@ import cartIcon from '../../icons/cart-icon.png';
 
 function HeaderIcons() {
   return (
-    <div>
-      <img className="icon-header" src={accountIcon} alt="icone conta" />
-      <img className="icon-header" src={cartIcon} alt="icone carrinho" />
+    <div className="icons-container">
+      <div className="icon-box">
+        <div className="icon-image">
+          <img width="20px" src={accountIcon} alt="icone conta" />
+        </div>
+        <p>MINHA CONTA</p>
+      </div>
+      <div className="icon-box">
+        <div className="icon-image">
+          <img width="30px" src={cartIcon} alt="icone carrinho" />
+        </div>
+        <p>CARRINHO</p>
+      </div>
     </div>
   );
 }
