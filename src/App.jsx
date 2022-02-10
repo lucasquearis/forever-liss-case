@@ -1,7 +1,9 @@
 import React from 'react';
 import Carrousel from './components/Carrousel';
 import Header from './components/Header';
+import Highlights from './components/Highlights';
 import Navigation from './components/Navigation';
+import './style.css';
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <Header />
       <Navigation />
       <Carrousel />
-      <h1>Hello World!</h1>
+      <Highlights />
     </div>
   );
 }
