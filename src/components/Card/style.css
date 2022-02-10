@@ -1,0 +1,16 @@
+.cards-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: max-content;
+  margin: 10px;
+  background-color: white;
+}

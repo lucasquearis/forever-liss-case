@@ -1,5 +1,5 @@
 import React from 'react';
-import Cards from '../Cards';
+// import Card from '../Card';
 import './style.css';
 
 function Highlights() {
@@ -9,7 +9,6 @@ function Highlights() {
         <p>FOREVER BABY</p>
         <span>DESTAQUES</span>
       </div>
-      <Cards />
     </div>
   );
 }
