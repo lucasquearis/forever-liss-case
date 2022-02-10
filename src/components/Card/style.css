@@ -7,10 +7,52 @@
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 200px;
-  height: max-content;
+  width: 256px;
+  height: 387px;
   margin: 10px;
   background-color: white;
+}
+
+.card-container > a > p {
+  color: #345c7d;
+  padding: 0 14px;
+  margin: 0;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.price {
+  align-self: baseline;
+  padding: 0 14px;
+  color: #bf6b84;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.image-item {
+  width: 256px;
+  height: 190px;
+}
+
+.add-cart-button {
+  display: flex;
+  border-style: none;
+  background-color: #FF8A00;
+  box-shadow: inset 0px 4px 10px #FFAD4D;
+  color: white;
+  border-radius: 3px;
+  font-weight: 900;
+  width: 227px;
+  height: 46px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-cart-button > img {
+  margin-right: 5px;
 }

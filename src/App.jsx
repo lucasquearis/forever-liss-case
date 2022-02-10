@@ -12,6 +12,7 @@ function App() {
       <Navigation />
       <Carrousel />
       <Highlights />
+      <Highlights />
     </div>
   );
 }

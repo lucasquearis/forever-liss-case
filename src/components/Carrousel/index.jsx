@@ -16,20 +16,22 @@ function Carrousel() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings}>
-      <div className="image-container">
-        <img className="banner-image" src={bannerOne} alt="banner enxoval" />
-      </div>
-      <div className="image-container">
-        <img className="banner-image" src={bannerTwo} alt="banner enxoval" />
-      </div>
-      <div className="image-container">
-        <img className="banner-image" src={bannerThree} alt="banner enxoval" />
-      </div>
-      <div className="image-container">
-        <img className="banner-image" src={bannerFour} alt="banner enxoval" />
-      </div>
-    </Slider>
+    <div className="carrousel-container">
+      <Slider {...settings}>
+        <div className="image-container">
+          <img className="banner-image" src={bannerOne} alt="banner enxoval" />
+        </div>
+        <div className="image-container">
+          <img className="banner-image" src={bannerTwo} alt="banner enxoval" />
+        </div>
+        <div className="image-container">
+          <img className="banner-image" src={bannerThree} alt="banner enxoval" />
+        </div>
+        <div className="image-container">
+          <img className="banner-image" src={bannerFour} alt="banner enxoval" />
+        </div>
+      </Slider>
+    </div>
   );
 }
 

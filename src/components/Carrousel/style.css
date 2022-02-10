@@ -12,3 +12,8 @@
 .slick-dots > .slick-active > button::before {
   color: #345c7d !important;
 }
+
+.carrousel-container {
+  height: max-content;
+  margin-bottom: 50px;
+}
