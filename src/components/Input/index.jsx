@@ -1,13 +1,19 @@
 import React from 'react';
+import { string } from 'prop-types';
 import './style.css';
 
-function Input() {
+function Input({ placeholder, nameButton }) {
   return (
-    <label className="input-box" htmlFor="search-bar">
-      <input id="search-bar" type="text" placeholder="Qual o mimo de hoje para o seu anjinho?" />
-      <button type="button">BUSCAR</button>
+    <label className="input-box" htmlFor="input-bar">
+      <input id="input-bar" type="text" placeholder={placeholder} />
+      <button type="button">{nameButton}</button>
     </label>
   );
 }
+
+Input.propTypes = {
+  placeholder: string.isRequired,
+  nameButton: string.isRequired,
+};
 
 export default Input;

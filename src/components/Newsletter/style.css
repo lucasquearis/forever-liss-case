@@ -1,0 +1,26 @@
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  height: 187px;
+  background-color: #F5717F;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-newsletter-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.title-newsletter-container > h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.title-newsletter-container > p {
+  font-size: 14px;
+  font-weight: 400;
+}

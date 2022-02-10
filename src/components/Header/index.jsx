@@ -14,7 +14,7 @@ function Header() {
             <img className="logo" src={logo} alt="logo forever baby" />
           </a>
         </div>
-        <Input />
+        <Input placeholder="Qual o mimo de hoje para o seu anjinho?" nameButton="BUSCAR" />
         <HeaderIcons />
       </div>
     </header>
