@@ -1,7 +1,7 @@
 .icons-container {
   display: flex;
   width: 20%;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
   font-weight: 900;
 }
@@ -25,7 +25,14 @@
   margin: 0 10px
 }
 
-.icon-box > p {
+.icon-box > a > p {
   width: max-content;
   margin: 0;
+}
+
+.a-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

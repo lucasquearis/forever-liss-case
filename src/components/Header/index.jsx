@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import logo from '../../images/forever-baby-logo.png';
 import HeaderIcons from '../HeaderIcons';
@@ -9,7 +10,9 @@ function Header() {
     <header className="header-container">
       <div className="header-box">
         <div className="logo-box">
-          <img className="logo" src={logo} alt="logo forever baby" />
+          <a href="#">
+            <img className="logo" src={logo} alt="logo forever baby" />
+          </a>
         </div>
         <Input />
         <HeaderIcons />
