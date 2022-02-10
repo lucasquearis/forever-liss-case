@@ -5,6 +5,10 @@
 }
 
 .banner-image {
-  max-height: 380px;
+  height: 380px;
   width: 100%;
+}
+
+.slick-dots > .slick-active > button::before {
+  color: #345c7d !important;
 }
