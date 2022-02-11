@@ -1,26 +1,19 @@
-import React from 'react';
-import {
-  oneOfType, node, arrayOf, func,
-} from 'prop-types';
+import React, { useContext } from 'react';
 import './style.css';
+import StateContext from '../../context/StateContext';
 
-function Modal({ children, onClick }) {
+function Modal() {
+  const { setIsModalVisible, modalMessage } = useContext(StateContext);
   return (
     <div className="modal-container">
       <div className="modal-box">
-        <div className="modal-content">{children}</div>
-        <button className="add-cart-button" onClick={onClick} type="button">Fechar</button>
+        <div className="modal-content">
+          <h1>{modalMessage}</h1>
+        </div>
+        <button className="add-cart-button" onClick={() => setIsModalVisible(false)} type="button">Fechar</button>
       </div>
     </div>
   );
 }
-
-Modal.propTypes = {
-  children: oneOfType([
-    arrayOf(node),
-    node,
-  ]).isRequired,
-  onClick: func.isRequired,
-};
 
 export default Modal;
