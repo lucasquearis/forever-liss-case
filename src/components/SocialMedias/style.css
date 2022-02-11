@@ -20,7 +20,7 @@
   width: 90%;
 }
 
-.social-nav > p {
+.social-nav > a > p {
   font-size: 14px;
   font-weight: 500;
   color: #345C7D;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import listNavigation from '../../constants/listNavigation';
 import listSocialMedias from '../../constants/listSocialMedias';
@@ -12,7 +13,7 @@ function SocialMedias() {
         {listSocialMedias.map((item) => <a key={item.name} target="_blank" href={item.url} rel="noreferrer"><img width="55px" src={item.image} alt={item.name} /></a>)}
       </div>
       <div className="social-nav">
-        {listNavigation.map((item) => <p key={item}>{item}</p>)}
+        {listNavigation.map((item) => <a href="#" key={item}><p>{item}</p></a>)}
       </div>
       <h1 className="title-social">FORMAS DE PAGAMENTO</h1>
       <div className="cards-social">
