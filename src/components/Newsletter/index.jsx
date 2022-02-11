@@ -3,11 +3,13 @@ import Input from '../Input';
 import useInputEmail from '../../hooks/useInputEmail';
 import './style.css';
 import StateContext from '../../context/StateContext';
+import useWidth from '../../hooks/useWidth';
 
 function Newsletter() {
   const { setModalMessage, setIsModalVisible } = useContext(StateContext);
   const [email, setEvent] = useInputEmail('');
   const [validEmail, setValidEmail] = useState(false);
+  const [isMobile] = useWidth();
 
   useEffect(() => {
     const text = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
@@ -45,7 +47,7 @@ function Newsletter() {
         onChange={setEvent}
         onClick={sendEmail}
         isInvalidInput={!(email.length > 3)}
-        className="input-newsletter"
+        className={isMobile ? 'input-newsletter' : 'input-box'}
       />
     </div>
   );

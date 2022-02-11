@@ -3,15 +3,6 @@
   background-color: #F5717F;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #6c5b7a;
-}
-
 .nav-container > ul {
   list-style: none;
   padding: 0;
@@ -21,4 +12,4 @@ a:hover {
   color: white;
   font-weight: 900;
   height: 100%;
-}
+}  
