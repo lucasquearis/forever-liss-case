@@ -3,10 +3,10 @@ import { string, func, bool } from 'prop-types';
 import './style.css';
 
 function Input({
-  placeholder, nameButton, value, onChange, isInvalidInput, onClick,
+  placeholder, nameButton, value, onChange, isInvalidInput, onClick, className,
 }) {
   return (
-    <label className="input-box" htmlFor="input-bar">
+    <label className={className} htmlFor="input-bar">
       <input value={value} onChange={onChange} id="input-bar" type="text" placeholder={placeholder} />
       <button onClick={onClick} disabled={isInvalidInput} type="button">{nameButton}</button>
     </label>
@@ -15,14 +15,16 @@ function Input({
 
 Input.defaultProps = {
   isInvalidInput: false,
+  className: 'input-box',
 };
 
 Input.propTypes = {
+  isInvalidInput: bool,
+  className: string,
   placeholder: string.isRequired,
   nameButton: string.isRequired,
   value: string.isRequired,
   onChange: func.isRequired,
-  isInvalidInput: bool,
   onClick: func.isRequired,
 };
 

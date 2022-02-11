@@ -24,3 +24,35 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+@media only screen and (max-width: 814px) {
+  .input-newsletter {
+    display: flex;
+    width: 90%;
+    height: 52px;
+  }
+
+  .input-newsletter > input {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 4px 4px  rgba(0, 0, 0, 0.1);
+  }
+
+  .input-newsletter > button {
+    border-style: none;
+    background-color: white;
+    color: #345C7D;
+    font-weight: 700;
+    padding-right: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-newsletter > input::placeholder {
+    font-style: italic;
+    color: #AAAAAA;
+    padding-left: 10px;
+  }
+
+}
+

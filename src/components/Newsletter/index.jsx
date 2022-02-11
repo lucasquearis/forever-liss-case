@@ -45,6 +45,7 @@ function Newsletter() {
         onChange={setEvent}
         onClick={sendEmail}
         isInvalidInput={!(email.length > 3)}
+        className="input-newsletter"
       />
     </div>
   );
