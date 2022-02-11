@@ -17,7 +17,7 @@ function SocialMedias() {
       </div>
       <h1 className="title-social">FORMAS DE PAGAMENTO</h1>
       <div className="cards-social">
-        {listCardsCredit.map((item) => <img key={item.name} width="45px" src={item.image} alt={item.name} />)}
+        {listCardsCredit.map((item) => <img className="credit-card" key={item.name} width="45px" src={item.image} alt={item.name} />)}
       </div>
     </div>
   );

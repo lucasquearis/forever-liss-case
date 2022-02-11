@@ -20,7 +20,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #ED707F;
+  background-color: #F3AF94;
   color: #345C7E;
   width: 60%;
   height: 30%;
@@ -33,6 +33,10 @@
 }
 
 .modal-content h1 {
-  background-color: #ED707F;
+  font-size: 15px;
+}
+
+.modal-content h1 {
+  background-color: #F3AF94;
   margin: 0;
 }

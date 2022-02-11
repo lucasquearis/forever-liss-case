@@ -65,4 +65,8 @@
     text-align: center;
     margin: 10px
   }
+
+  .credit-card {
+    margin: 0 5px;
+  }
 }

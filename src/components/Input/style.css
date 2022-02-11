@@ -43,14 +43,19 @@
   .input-box > input {
     width: 100%;
     border: none;
+    padding: 0 20px;
     box-shadow: inset 0 4px 4px  rgba(0, 0, 0, 0.1);
+    outline: none;
   }
 
   .input-box > button {
+    border: solid black 1px;
     border-style: none;
+    outline: none;
     background-color: white;
     color: #345C7D;
     font-weight: 700;
+    padding: 10px;
     padding-right: 10px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
