@@ -5,13 +5,16 @@ import StateContext from './StateContext';
 function StateProvider({ children }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  const [hamburguerOpen, setHamburguerOpen] = useState(false);
 
   const context = useMemo(() => ({
     isModalVisible,
     setIsModalVisible,
     modalMessage,
     setModalMessage,
-  }), [isModalVisible]);
+    hamburguerOpen,
+    setHamburguerOpen,
+  }), [isModalVisible, modalMessage, hamburguerOpen]);
 
   return (
     <StateContext.Provider value={context}>
