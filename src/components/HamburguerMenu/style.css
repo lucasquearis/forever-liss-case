@@ -1,6 +1,8 @@
 .button-menu {
   border-style: none;
   background-color: #F3AF94;
+  padding: 0;
+  margin: 0 10px;
 }
 
 .button-menu > img {

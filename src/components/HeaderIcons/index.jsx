@@ -1,30 +1,35 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { bool } from 'prop-types';
 import './style.css';
 import accountIcon from '../../icons/account-icon.png';
 import cartIcon from '../../icons/cart-icon.png';
 
-function HeaderIcons() {
+function HeaderIcons({ isMobile }) {
   return (
     <div className="icons-container">
       <div className="icon-box">
         <a className="a-icons" href="#">
           <div className="icon-image">
-            <img width="20px" src={accountIcon} alt="icone conta" />
+            <img width={isMobile ? '15px' : '20px'} src={accountIcon} alt="icone conta" />
           </div>
-          <p>MINHA CONTA</p>
+          { !isMobile && <p>MINHA CONTA</p>}
         </a>
       </div>
       <div className="icon-box">
         <a className="a-icons" href="#">
           <div className="icon-image">
-            <img width="30px" src={cartIcon} alt="icone carrinho" />
+            <img width={isMobile ? '27px' : '30px'} src={cartIcon} alt="icone carrinho" />
           </div>
-          <p>CARRINHO</p>
+          { !isMobile && <p>CARRINHO</p>}
         </a>
       </div>
     </div>
   );
 }
+
+HeaderIcons.propTypes = {
+  isMobile: bool.isRequired,
+};
 
 export default HeaderIcons;

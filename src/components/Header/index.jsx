@@ -14,6 +14,7 @@ function Header() {
   const [product, setEvent, setProduct] = useInput('');
   const [isMobile] = useWidth();
   const [isInvalidInput, setIsInvalidInput] = useState(false);
+  const [hamburguerOpen, setHamburguerOpen] = useState(false);
 
   useEffect(() => (product.length < 3
     ? setIsInvalidInput(true) : setIsInvalidInput(false)), [product]);
@@ -24,15 +25,18 @@ function Header() {
     setProduct('');
   };
 
+  const conditionalRenderInput = !!(hamburguerOpen || !isMobile);
+
   return (
     <header className="header-container">
-      {isMobile && <HamburguerMenu />}
       <div className="header-box">
+        {isMobile && <HamburguerMenu setHamburguerOpen={setHamburguerOpen} />}
         <div className="logo-box">
           <a href="#">
             <img className="logo" src={logo} alt="logo forever baby" />
           </a>
         </div>
+        {conditionalRenderInput && (
         <Input
           isInvalidInput={isInvalidInput}
           value={product}
@@ -41,8 +45,9 @@ function Header() {
           nameButton="BUSCAR"
           onClick={searchProduct}
         />
-        <HeaderIcons />
+        )}
       </div>
+      <HeaderIcons isMobile={isMobile} />
     </header>
   );
 }

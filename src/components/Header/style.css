@@ -21,3 +21,22 @@
     width: 20%;
   }  
 }
+@media only screen and (max-width: 814px) {
+  .header-container {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #f7b094;
+  }
+  
+  .logo {
+    width: 84px;
+  }
+
+  .header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

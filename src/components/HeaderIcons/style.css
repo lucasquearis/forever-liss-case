@@ -1,38 +1,68 @@
-.icons-container {
-  display: flex;
-  width: 20%;
-  justify-content: center;
-  color: white;
-  font-weight: 900;
+@media only screen and (min-width: 815px) {
+  .icons-container {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+  }
+  
+  .icon-image {
+    display: flex;
+    align-items: center;
+    background-color: #f5717f;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .icon-box {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px
+  }
+  
+  .icon-box > a > p {
+    width: max-content;
+    margin: 0;
+  }
+  
+  .a-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.icon-image {
-  display: flex;
-  align-items: center;
-  background-color: #f5717f;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
+@media only screen and (max-width: 814px) {
+  .icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
 
-.icon-box {
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px
-}
+  .icon-image {
+    display: flex;
+    align-items: center;
+    background-color: #f5717f;
+    justify-content: center;
+    width: 42px;
+    height: 41px;
+    border-radius: 50%;
+  }
 
-.icon-box > a > p {
-  width: max-content;
-  margin: 0;
-}
-
-.a-icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .icon-box {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px
+  }
 }
