@@ -4,6 +4,7 @@ import StateContext from '../../context/StateContext';
 import useInput from '../../hooks/useInput';
 import useWidth from '../../hooks/useWidth';
 import logo from '../../images/forever-baby-logo.png';
+import HamburguerMenu from '../HamburguerMenu';
 import HeaderIcons from '../HeaderIcons';
 import Input from '../Input';
 import './style.css';
@@ -25,7 +26,7 @@ function Header() {
 
   return (
     <header className="header-container">
-      {isMobile && <h1>MENU</h1>}
+      {isMobile && <HamburguerMenu />}
       <div className="header-box">
         <div className="logo-box">
           <a href="#">
