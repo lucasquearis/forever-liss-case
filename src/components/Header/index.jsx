@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import StateContext from '../../context/StateContext';
 import useInput from '../../hooks/useInput';
+import useWidth from '../../hooks/useWidth';
 import logo from '../../images/forever-baby-logo.png';
 import HeaderIcons from '../HeaderIcons';
 import Input from '../Input';
@@ -10,6 +11,7 @@ import './style.css';
 function Header() {
   const { setIsModalVisible, setModalMessage } = useContext(StateContext);
   const [product, setEvent, setProduct] = useInput('');
+  const [isMobile] = useWidth();
   const [isInvalidInput, setIsInvalidInput] = useState(false);
 
   useEffect(() => (product.length < 3
@@ -23,6 +25,7 @@ function Header() {
 
   return (
     <header className="header-container">
+      {isMobile && <h1>MENU</h1>}
       <div className="header-box">
         <div className="logo-box">
           <a href="#">

@@ -1,27 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, {
-  useContext, useEffect, useState,
-} from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import Card from '../Card';
 import products from '../../mocks/products';
 import './style.css';
-import StateContext from '../../context/StateContext';
+import useWidth from '../../hooks/useWidth';
 
 function Highlights() {
-  const [width, setWidth] = useState(0);
-  const { setIsMobile } = useContext(StateContext);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [setWidth, setIsMobile]);
+  const [isMobile, width] = useWidth();
 
   let firstCarrousel = 0;
   let secondCarrousel = 0;
@@ -35,21 +21,13 @@ function Highlights() {
       firstCarrousel = 3;
       secondCarrousel = 5;
       break;
+    case isMobile:
+      firstCarrousel = 2;
+      secondCarrousel = 6;
+      break;
     default:
       firstCarrousel = 2;
       secondCarrousel = 6;
-  }
-
-  switch (true) {
-    case width > 815:
-      console.log('n é mobile');
-      setIsMobile(false);
-      break;
-    case width < 815:
-      console.log('é mobile');
-      setIsMobile(true);
-      break;
-    default:
       break;
   }
 
