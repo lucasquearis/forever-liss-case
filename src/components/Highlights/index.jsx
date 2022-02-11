@@ -19,8 +19,26 @@ function Highlights() {
     };
   }, [setWidth]);
 
-  const fourCardsFirstList = width < 1140 ? 3 : 4;
-  const fourCardsSecondList = width < 1140 ? 5 : 4;
+  // const fourCardsFirstList = width < 1140 ? 2 : 4;
+  // const fourCardsSecondList = width < 1140 ? 6 : 4;
+
+  let firstCarrousel = 0;
+
+  let secondCarrousel = 0;
+
+  switch (true) {
+    case width > 1130:
+      firstCarrousel = 4;
+      secondCarrousel = 4;
+      break;
+    case width < 1130 && width > 870:
+      firstCarrousel = 3;
+      secondCarrousel = 5;
+      break;
+    default:
+      firstCarrousel = 2;
+      secondCarrousel = 6;
+  }
 
   const settings = {
     dots: true,
@@ -39,7 +57,7 @@ function Highlights() {
       <Slider {...settings}>
         <div className="display-card-one">
           {products.map((item, index) => {
-            if (index < fourCardsFirstList) {
+            if (index < firstCarrousel) {
               return (
                 <Card
                   key={item.id}
@@ -56,7 +74,7 @@ function Highlights() {
         </div>
         <div className="display-card-two">
           {products.map((item, index) => {
-            if (index > fourCardsSecondList) {
+            if (index > secondCarrousel) {
               return (
                 <Card
                   key={item.id}
