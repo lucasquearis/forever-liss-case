@@ -7,26 +7,23 @@ function Input({
 }) {
   return (
     <label className="input-box" htmlFor="input-bar">
-      <input style={{ border: '1px solid red !important' }} value={value} onChange={onChange} id="input-bar" type="text" placeholder={placeholder} />
+      <input value={value} onChange={onChange} id="input-bar" type="text" placeholder={placeholder} />
       <button onClick={onClick} disabled={isInvalidInput} type="button">{nameButton}</button>
     </label>
   );
 }
 
 Input.defaultProps = {
-  onClick: () => {},
-  onChange: () => {},
   isInvalidInput: false,
-  value: '',
 };
 
 Input.propTypes = {
   placeholder: string.isRequired,
   nameButton: string.isRequired,
-  value: string,
-  onChange: func,
+  value: string.isRequired,
+  onChange: func.isRequired,
   isInvalidInput: bool,
-  onClick: func,
+  onClick: func.isRequired,
 };
 
 export default Input;
