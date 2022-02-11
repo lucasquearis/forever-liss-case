@@ -26,11 +26,11 @@
 
 .display-card-one {
   display: flex !important;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 
 .display-card-two {
   display: flex !important;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
