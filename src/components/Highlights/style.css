@@ -12,6 +12,7 @@
   margin: 0;
   margin-right: 10px;
   color: white;
+  font-size: 22px;
   font-weight: 900;
 }
 
@@ -19,17 +20,8 @@
   color: #345c7d;
   font-weight: 900;
   padding-bottom: 0;
-  z-index: 2;
-}
-
-.title-container > hr {
-  opacity: 100%;
-  width: 98px;
-  height: 7px;
-  color: #ED707F;
-  position: relative;
-  z-index: 1;
-  right: 96px;
+  border-bottom: 5px solid #f5717f;
+  font-size: 22px;
 }
 
 .display-card-one {

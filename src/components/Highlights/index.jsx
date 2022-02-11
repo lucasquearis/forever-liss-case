@@ -1,12 +1,27 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import Card from '../Card';
 import products from '../../mocks/products';
-// import Card from '../Card';
 import './style.css';
 
 function Highlights() {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [setWidth]);
+
+  const fourCardsFirstList = width < 1140 ? 3 : 4;
+  const fourCardsSecondList = width < 1140 ? 5 : 4;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -24,7 +39,7 @@ function Highlights() {
       <Slider {...settings}>
         <div className="display-card-one">
           {products.map((item, index) => {
-            if (index < 4) {
+            if (index < fourCardsFirstList) {
               return (
                 <Card
                   key={item.id}
@@ -41,7 +56,7 @@ function Highlights() {
         </div>
         <div className="display-card-two">
           {products.map((item, index) => {
-            if (index > 4 && index < 9) {
+            if (index > fourCardsSecondList) {
               return (
                 <Card
                   key={item.id}
