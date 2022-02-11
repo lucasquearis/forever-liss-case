@@ -8,12 +8,18 @@ import Input from '../Input';
 import './style.css';
 
 function Header() {
-  const { setIsModalVisible } = useContext(StateContext);
-  const [product, setEvent] = useInput('');
+  const { setIsModalVisible, setModalMessage } = useContext(StateContext);
+  const [product, setEvent, setProduct] = useInput('');
   const [isInvalidInput, setIsInvalidInput] = useState(false);
 
   useEffect(() => (product.length < 3
     ? setIsInvalidInput(true) : setIsInvalidInput(false)), [product]);
+
+  const searchProduct = () => {
+    setIsModalVisible(true);
+    setModalMessage(`Você pesquisou: ${product}...`);
+    setProduct('');
+  };
 
   return (
     <header className="header-container">
@@ -29,7 +35,7 @@ function Header() {
           onChange={setEvent}
           placeholder="Qual o mimo de hoje para o seu anjinho?"
           nameButton="BUSCAR"
-          onClick={() => setIsModalVisible(true)}
+          onClick={searchProduct}
         />
         <HeaderIcons />
       </div>

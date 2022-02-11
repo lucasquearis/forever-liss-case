@@ -11,6 +11,7 @@ function StateProvider({ children }) {
     isModalVisible,
     setIsModalVisible,
     modalMessage,
+    setModalMessage,
   }), [isModalVisible]);
 
   return (

@@ -14,8 +14,8 @@ function App() {
   const { isModalVisible } = useContext(StateContext);
   return (
     <div className="App">
-      <Header />
       {isModalVisible && <Modal />}
+      <Header />
       <Navigation />
       <Carrousel />
       <Highlights />
