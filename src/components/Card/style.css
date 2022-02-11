@@ -13,6 +13,7 @@
   height: 387px;
   margin: 10px;
   background-color: white;
+  border-bottom: #F5717F 3px solid;
 }
 
 .card-container > a > p {

@@ -1,19 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
+import { func } from 'prop-types';
 import useInput from '../../hooks/useInput';
 import logo from '../../images/forever-baby-logo.png';
 import HeaderIcons from '../HeaderIcons';
 import Input from '../Input';
 import './style.css';
 
-function Header() {
-  const [product, setEvent] = useInput('');
+function Header({ setIsModalHeaderVisible, setSearchBarHeader }) {
+  const [product, setEvent, setProduct] = useInput('');
   const [isInvalidInput, setIsInvalidInput] = useState(false);
 
   useEffect(() => {
-    const test = /[^a-zA-Z 0-9]+/g.test(product);
-    return test || product.length < 3 ? setIsInvalidInput(true) : setIsInvalidInput(false);
-  }, [product, isInvalidInput]);
+    if (product.length < 3) {
+      return setIsInvalidInput(true);
+    }
+    setSearchBarHeader(product);
+    return setIsInvalidInput(false);
+  }, [product]);
+
+  const searchProduct = () => {
+    setIsModalHeaderVisible(true);
+    setProduct('');
+  };
 
   return (
     <header className="header-container">
@@ -24,16 +33,22 @@ function Header() {
           </a>
         </div>
         <Input
-          isValidInput={isInvalidInput}
+          isInvalidInput={isInvalidInput}
           value={product}
           onChange={setEvent}
           placeholder="Qual o mimo de hoje para o seu anjinho?"
           nameButton="BUSCAR"
+          onClick={searchProduct}
         />
         <HeaderIcons />
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  setIsModalHeaderVisible: func.isRequired,
+  setSearchBarHeader: func.isRequired,
+};
 
 export default Header;
