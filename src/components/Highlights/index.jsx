@@ -19,6 +19,7 @@ function Highlights() {
       <div className="title-container">
         <p>FOREVER BABY</p>
         <span>DESTAQUES</span>
+        <hr />
       </div>
       <Slider {...settings}>
         <div className="display-card-one">

@@ -1,12 +1,14 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, func, bool } from 'prop-types';
 import './style.css';
 
-function Input({ placeholder, nameButton }) {
+function Input({
+  placeholder, nameButton, value, onChange, isValidInput,
+}) {
   return (
     <label className="input-box" htmlFor="input-bar">
-      <input id="input-bar" type="text" placeholder={placeholder} />
-      <button type="button">{nameButton}</button>
+      <input style={{ border: '1px solid red !important' }} value={value} onChange={onChange} id="input-bar" type="text" placeholder={placeholder} />
+      <button disabled={isValidInput} type="button">{nameButton}</button>
     </label>
   );
 }
@@ -14,6 +16,9 @@ function Input({ placeholder, nameButton }) {
 Input.propTypes = {
   placeholder: string.isRequired,
   nameButton: string.isRequired,
+  value: string.isRequired,
+  onChange: func.isRequired,
+  isValidInput: bool.isRequired,
 };
 
 export default Input;
