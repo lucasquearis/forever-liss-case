@@ -1,6 +1,12 @@
+#root {
+  background-color: #F1F1F1;
+}
+
 .App {
   background-color: #f7b094;
   overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 a {
